@@ -1,6 +1,6 @@
 % Getting facts.
 get_facts:-
-  open('C:\\Users\\MOHD SUFYAN\\input_facts.txt', read, Text), 
+  open('input_facts.txt', read, Text), 
   read_file(Text, Lines),
   close(Text),
   facts(Lines).

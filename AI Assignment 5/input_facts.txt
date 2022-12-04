@@ -1,12 +1,13 @@
-interest('Network and Security Engineer').
-course_taken('Network Security (NSC)').
+interest('Data Engineer').
+course_taken('Database Management Systems (DBMS)').
+course_taken('Practical Bioinformatics (PB)').
 course_taken('Operating Systems (OS)').
 course_taken('Trustworthy AI Systems (TAIS)').
 course_taken('Meta-Learning (MTL)').
-interest_pre_requisite_courses('Network and Security Engineer', ['Computer Networks (CN)', 'Network Security (NSC)', 'Operating Systems (OS)']).
-interest_pre_requisite_courses('Data Engineer', ['Database Management Systems (DBMS)', 'Database System Implementation (DBSI)', 'Big Data Analytics (BDA)']).
+interest_pre_requisite_courses('Network and Security Engineer', ['Computer Networks (CN)', 'Network Security (NSC)', 'Operating Systems (OS)', 'Mining Large Networks (MLN)', 'Network Anonymity and Privacy (NAP)']).
+interest_pre_requisite_courses('Data Engineer', ['Database Management Systems (DBMS)', 'Database System Implementation (DBSI)', 'Big Data Analytics (BDA)', 'Data Science (DSC)']).
 interest_pre_requisite_courses('Electronics Engineer', ['Integrated Electronics (IE)', 'Circuit theory and devices (CTD)', 'Fields and Waves (F&W)', 'Embedded Logic Design (ELD)', 'Digital Signal Processing (DSP)']).
-interest_pre_requisite_courses('Bioinformatics Engineer', ['Practical Bioinformatics (PB)', 'Algorithms in BioInformatics (ABIN)', 'Algorithms in Computational Biology (ACB)']).
+interest_pre_requisite_courses('Bioinformatics Engineer', ['Practical Bioinformatics (PB)', 'Algorithms in BioInformatics (ABIN)', 'Algorithms in Computational Biology (ACB)', 'Computing For Medicine (CM)', 'Computer Aided Drug Design (CADD)']).
 interest_pre_requisite_courses('Robotics Engineer', ['Robotics (IRob)', 'Social Robotics (SR)', 'Non Linear and Adaptive Control of Robotic Systems (NLR)']).
 interest_pre_requisite_courses('AI Engineer', ['Artificial Intelligence (AI)', 'Meta-Learning (MTL)', 'Trustworthy AI Systems (TAIS)', 'Statistical Machine Learning (SML)', 'Advanced Machine Learning (AML)', 'Machine Learning (ML)', 'Natural Language Processing (NLP)']).
 interest_pre_requisite_courses('ML Engineer', ['Statistical Machine Learning (SML)', 'Advanced Machine Learning (AML)', 'Machine Learning (ML)', 'Natural Language Processing (NLP)']).

@@ -1,86 +1,40 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## Importing All Essential Libraries
-
-# In[1]:
-
-
+## Importing All Essential Libraries
 import nltk
-import numpy as np
-from nltk.stem import WordNetLemmatizer 
-import pandas as pd
+from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-import sklearn
 from nltk.tokenize import word_tokenize
 import string
-import warnings
-from nltk.stem import PorterStemmer
 
 
-# ## Downloading stopwords, punctuations, and wordnet
-
-# In[2]:
-
-
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+## Downloading stopwords, punctuations, and wordnet
+# nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
 
 
-# ## Reading Input File
-
-# In[3]:
-
-
-# Rules-
-# Only one interest should be mentioned ideally.
-# No spelling mistakes. Writes exact career and interest as defined in the list.
-# Write 'courses done' or 'done courses' preceeding the courses done by you.
-
-input_file = open("D:\My Folder\Academics\AI\AI_Assignment\AI Assignment 5\input_file.txt", 'r')
+## Reading Input File
+input_file = open("input_file.txt", 'r')
 text = input_file.read()
 input_file.close()
 
 
-# ## Preprocessing Input File Using NLP Libraries
-
-# In[4]:
-
-
+## Preprocessing Input File Using NLP Libraries
 input_words = []
-
-# stop words from English
 stopWords = set(stopwords.words('english'))
-
-# Declaring the wordNet Lemmatizer
 wordnet_lemmatizer = WordNetLemmatizer()
-
 text = text.lower()
-# Removing the punctuations
 for punctuation in string.punctuation:
   text = text.replace(punctuation, ' ')
-
-# lemmatising the words and updating the variable text
 text = wordnet_lemmatizer.lemmatize(text)
-
-# tokenising text
 tokenised_text = word_tokenize(text)
-
-# removing the stop words here
 for word in tokenised_text:
     if word not in stopWords:
       input_words.append(word)
-
-print(input_words)
-
-
-# ## Defining Courses and Interests
-
-# In[5]:
+print('Words are-\n', input_words)
 
 
+## Defining Courses and Interests
 interest_choices = ['Network and Security Engineer', 'Data Engineer', 'Electronics Engineer', 'Bioinformatics Engineer', 
                     'Robotics Engineer', 'AI Engineer', 'ML Engineer']
 
@@ -97,14 +51,9 @@ network_engineer_courses = ['Computer Networks (CN)', 'Network Security (NSC)', 
 ai_engineer_courses += ml_engineer_courses
 
 list_of_courses = network_engineer_courses + data_engineer_courses + ai_engineer_courses + robotics_engineer_courses + electronics_engineer_courses + bioinformatics_engineer_courses 
-# print(len(list_of_courses), list_of_courses)
 
 
-# ## Defining Helper Functions
-
-# In[6]:
-
-
+## Defining Helper Functions
 def get_index(word, listt):
     try:
         index = listt.index(word)
@@ -167,16 +116,12 @@ def get_course_name(name):
     return 'None'
 
 
-# ## Extracting Career Interest and Courses Done
-
-# In[7]:
-
-
+## Extracting Career Interest and Courses Done
 interest = ''
 if 'engineer' in input_words:
     index = input_words.index('engineer')
     interest = find_career_interest(index, input_words)
-print(interest)
+# print(interest)
 
 courses_done = []
 if 'courses' in input_words:
@@ -185,11 +130,7 @@ if 'courses' in input_words:
 # print(courses_done)
 
 
-# ## Asserting Facts In a Text File
-
-# In[8]:
-
-
+## Asserting Facts In a Text File
 facts_file = open("input_facts.txt", 'w')
 
 if len(interest) > 0:
@@ -241,19 +182,4 @@ for i in range(len(interest_choices)):
     
 
 facts_file.close()
-
-
-# In[9]:
-
-
-# from pyswip import Prolog
-
-# swipl = Prolog()
-# swipl.consult("main.pl")
-# # swipl.query("get_facts.")
-# electives_suggested = list(swipl.query("start"))
-# print(electives_suggested)
-# # for i in range(len(electives_suggested)):
-# #     var = electives_suggested[i].decode('utf-8')
-# #     output(var)
 
