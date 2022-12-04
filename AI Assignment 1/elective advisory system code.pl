@@ -70,7 +70,7 @@ course_name('CSE342') :- write('Statistical Machine Learning(CSE342)').
 course_name('CSE343') :- write('Machine Learning(CSE343)').
 course_name('CSE557') :- write('Big Data Analytics(CSE557)').
 course_name('CSE606') :- write('Data Warehouse(CSE606)').
-course_name('CSE618') :- write('DMeta-Learning(CSE618)').
+course_name('CSE618') :- write('Meta-Learning(CSE618)').
 course_name('CSE642') :- write('Advanced Machine Learning(CSE642)').
 course_name('CSE643') :- write('Artificial Intelligence(CSE643)').
 course_name('CSE656') :- write('Information Integration And Applications(CSE656)').

@@ -12,6 +12,7 @@ facts([]).
 read_file(Stream, []) :- at_end_of_stream(Stream).
 read_file(Stream, [H|T]) :- \+ at_end_of_stream(Stream), read(Stream, H), read_file(Stream, T).
 
+
 % Check courses and interest present.
 start:- get_facts, interest(X), course_taken(Y), process(X, Y).
 
@@ -39,9 +40,9 @@ subtract_lists(X, [], X).
 subtract_lists(All, [H|T], L):- list_member(H, All), list_delete(H, All, A), subtract_lists(A, T, L).
 
 list_delete(H, [H], []).
-list_delete(H,[H|L1], L1).
-list_delete(H, [Y|L2], [Y|L1]) :- list_delete(H,L2,L1).
+list_delete(H, [H|L1], L1).
+list_delete(H, [Y|L2], [Y|L1]) :- list_delete(H, L2, L1).
 
-list_member(H,[H|_]).
-list_member(H,[_|T]) :- list_member(H,T).
+list_member(H, [H|_]).
+list_member(H, [_|T]) :- list_member(H,T).
 

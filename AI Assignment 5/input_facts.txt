@@ -1,7 +1,7 @@
-interest('Data Engineer').
+interest('AI Engineer').
 course_taken('Database Management Systems (DBMS)').
 course_taken('Practical Bioinformatics (PB)').
-course_taken('Operating Systems (OS)').
+course_taken('Artificial Intelligence (AI)').
 course_taken('Trustworthy AI Systems (TAIS)').
 course_taken('Meta-Learning (MTL)').
 interest_pre_requisite_courses('Network and Security Engineer', ['Computer Networks (CN)', 'Network Security (NSC)', 'Operating Systems (OS)', 'Mining Large Networks (MLN)', 'Network Anonymity and Privacy (NAP)']).
